@@ -1,5 +1,5 @@
 # To-Do List 
-### A To-Do list is a simple list of tasks that need to be completed or things you want to do, often organized by priority or importance. It's a tool to help you track and manage your obligations, both personal and professional. 
+- A To-Do list is a simple list of tasks that need to be completed or things you want to do, often organized by priority or importance. It's a tool to help you track and manage your obligations, both personal and professional. 
 
 ## Setup the React + Vite app 
 
