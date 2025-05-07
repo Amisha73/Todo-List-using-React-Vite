@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-image: url("https://plus.unsplash.com/premium_photo-1726399099837-705e4d6c083b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDUzfHx8ZW58MHx8fHx8");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.app {
+  max-width: 480px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styling */
+header {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 12px 0;
+}
+
+/* style for buttons --  Add task, save, delete, edit, all, active, complete */
+.btn {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  color: white;
+  transition: 0.5s;
+}
+/* hover on buttons */
+.btn:hover {
+  background: white;
+  color: #1a1a1a;
+  border: 2px solid #6c757d;
+}
+
+/* input field style for adding task or edit task */
+.inputfield {
+  padding: 0.6em 1.2em;
+  background-color: #1a1a1a;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ToDo item */
+li {
+  /* background: #d049d9; */
+  padding: 10px;
+  border-radius: 8px;
+  margin: 12px;
+  border-left: 6px solid transparent;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: transparent;
+}
+
+li span {
+  font-size: large;
+  font-weight: 600;
+  align-items: start;
+}
+.taskstatus {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.list .edel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .app {
+    padding: 16px 20px;
+  }
+
+  .inputfield {
+    flex-direction: column;
+  }
+
+  header .btn {
+    width: 100%;
+  }
+
+  .inputfield[type="text"] {
+    width: 100%;
+  }
+  .list {
+    /* flex-direction: column; */
+  }
+  /* .list .edel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+  } */
+}
