@@ -8,13 +8,13 @@ const ToDoItem = () => {
         <button className="btn">Save</button>
       </div>
       {/* after adding task this show */}
-      {/* <div className='list'>
-          <span className='listItem'>{todo.text}</span>
+      <div className='list'>
+          <span className='listItem'>tasks</span>
           <div className=' edel'>
           <button className='btn'>Edit</button>
           <button className='btn'>Delete</button>
           </div>
-        </div> */}
+        </div>
     </li>
   );
 };
