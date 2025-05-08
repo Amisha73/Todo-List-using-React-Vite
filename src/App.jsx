@@ -9,27 +9,25 @@ const App = () => {
   const [inputValue, setInputValue] = useState("");
   const [filter, setFilter] = useState("all");
 
-
   // addTodo funtion add the task by clicking on add button
   const addTodo = () => {
-    // to add tasks using input tag,
     if (inputValue.trim() !== "") {
+      const capitalizedText =
+        inputValue.charAt(0).toUpperCase() + inputValue.slice(1);
+  
       setTodos([
         ...todos,
         {
           id: Date.now(),
-          text: inputValue,
-          // put status of complete : false
+          text: capitalizedText,
           completed: false,
         },
       ]);
-      // set input value again blank
       setInputValue("");
-    } else {  //if input is empty then it gives alert
+    } else {
       alert("Please enter a task");
     }
   };
-
 
   // deleteTodo function delete the task by clicking on delete button
   const deleteTodo = (id) => {
@@ -38,8 +36,7 @@ const App = () => {
     }
   };
 
-
-  // completeTodo function mark the task as complete the task by clicking on the task 
+  // completeTodo function mark the task as complete the task by clicking on the task
   // after click it show task as del tag works
   const completeTodo = (id) => {
     setTodos(
@@ -60,7 +57,7 @@ const App = () => {
       })
     );
   };
-    // filterTodo function filter the task by clicking on all, active and completed
+  // filterTodo function filter the task by clicking on all, active and completed
   const filterTodos = () =>
     todos.filter((todo) => {
       if (filter === "all") {
@@ -90,11 +87,16 @@ const App = () => {
           <button className="btn" onClick={() => setFilter("active")}>
             Active
           </button>
-          <button className="btn" onClick={() => setFilter("complete")}>
+          <button className="btn" onClick={() => setFilter("completed")}>
             Completed
           </button>
         </div>
-        <ToDoList />
+        <ToDoList
+          todos={filterTodos()}
+          deleteTodo={deleteTodo}
+          completeTodo={completeTodo}
+          editTodo={editTodo}
+        />
       </div>
     </>
   );

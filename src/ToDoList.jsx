@@ -1,10 +1,22 @@
-import React from 'react';
+import React from "react";
+import ToDoItem from "./ToDoItem";
 
-const ToDoList = () => {
+const ToDoList = ({ todos, deleteTodo, completeTodo, editTodo }) => {
   return (
-    <ol>
-
-    </ol>
+    <div className="task-container">
+      <ol>
+        {Array.isArray(todos) &&
+          todos.map((todo) => (
+            <ToDoItem
+              key={todo.id}
+              todo={todo}
+              deleteTodo={deleteTodo}
+              completeTodo={completeTodo}
+              editTodo={editTodo}
+            />
+          ))}
+      </ol>
+    </div>
   );
 };
 
