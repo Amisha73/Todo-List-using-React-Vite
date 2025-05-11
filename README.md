@@ -13,3 +13,25 @@
 
 ## Git Repo 
   `https://github.com/Amisha73/Todo-List-using-React-Vite.git`
+
+
+## Folder Structure 
+
+TODO LIST USING REACT VITE/todo-list-app
+├── public/
+│ ├── ...
+├── src/
+│ ├── App.css
+│ ├── App.jsx
+│ ├── Header.jsx
+│ ├── index.css
+│ ├── main.jsx
+| ├── ToDoItem.jsx
+│ └── ToDoList.jsx
+│ ├── assets/
+│ | └── favicon.avif
+├── index.html
+├── package.json
+├── README.md
+├── ....
+
